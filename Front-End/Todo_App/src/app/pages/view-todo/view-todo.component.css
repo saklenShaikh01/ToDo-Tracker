@@ -1,0 +1,96 @@
+.common-div{
+    display: inline-flex;
+    /* height:100px;
+    width: 200px; */
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: red;
+    text-align: center;
+    border-radius: 35px;
+}
+.cont{
+    margin-top: -40px;
+}
+/* .container{
+    margin-right: 150px;
+} */
+.searchComponent{
+    margin-top: -30px;
+   
+}
+.bottom{
+    position: relative;
+    right: 89px;
+}
+.menu-class mat-icon{
+    position: relative;
+    left: 135px;
+    
+}
+.menu-class button{
+    position: relative;
+    left: 140px;
+    
+}
+.highPrDiv a{
+   text-decoration: none;
+   color: black;
+   padding: 20px;
+    
+}
+
+.mediumPrDiv a{
+    text-decoration: none;
+   color: black;
+   padding: 20px;
+}
+.lowPrDiv a{
+    text-decoration: none;
+   color: black;
+   padding: 20px;
+}
+.no-priority a{
+    text-decoration: none;
+   color: black;
+   padding: 20px;
+}
+.highPrDiv{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px gray;
+    background:#f58c8e;
+    height: 200px;
+    width: 180px;
+}
+.mediumPrDiv{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px gray;
+    background: #e9fc7d;
+    height: 200px;
+    width: 180px;
+}
+.lowPrDiv{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px gray;
+    background: #00ee6e;
+    height: 200px;
+    width: 180px;
+}
+.no-priority{
+    box-shadow: 3px 3px 3px 0px gray;
+    height: 200px;
+    width: 180px;
+}
+.empty{
+    margin-top: 100px;
+    color: #fff;
+    margin-bottom: 52.5px;
+    text-align: center;
+    /* margin: auto; */
+}
+.page{
+    margin-top: 60px;
+    background: transparent;
+    margin-bottom: 50px;
+    color: #fff;
+}

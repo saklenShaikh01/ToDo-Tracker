@@ -1,0 +1,55 @@
+
+<mat-toolbar>
+    <a>
+    <img src="../../../assets/TODO-Group.png" alt="logo" class = "logo">
+    </a>
+    <span class="example-spacer"></span>
+    <!-- <button  *ngIf="!isLoggedIn" mat-raised-button color = "primary" class = "headbtn">
+        SignUp
+     </button> -->
+     <button mat-button style="color: white;" *ngIf="!isLoggedIn" [matMenuTriggerFor]="menu" showToggle matSuffix>Welcome</button><mat-icon style="color: white;">expand_more</mat-icon> 
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="openDialog('0ms', '0ms')">Login</button>
+  <button mat-menu-item (click)="openSignup('0ms', '0ms')">SignUp</button>
+</mat-menu>
+
+    <!-- <button *ngIf="!isLoggedIn" mat-raised-button color = "primary" class = "headbtn" (click)="openDialog('0ms', '0ms')">
+       Login
+    </button> -->
+    <!-- <a id="user" *ngIf = "isLoggedIn && users" class = "userName" routerLink = "/admin/profile">
+        <div class = "userName">
+         {{users.fullName}}
+         </div>
+      </a> -->
+<!-- <div *ngIf = "isLoggedIn">
+<a [matMenuTriggerFor]="menu"><img id="img" *ngIf = "isLoggedIn && users" [src] = "userProfile" alt="profileImage" class = "profile"></a>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>{{name}}</button>
+  <button mat-menu-item>Update Profile</button>
+  <button mat-menu-item (click)="logOut()">LogOut</button>
+</mat-menu>
+</div> -->
+
+<!-- <div *ngIf = "isLoggedIn">
+    <a [matMenuTriggerFor]="beforeMenu" class = "mylink">
+    <img *ngIf = "isLoggedIn && users" [src] = "userProfile" alt="profileImage" id="img" >
+    </a>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item>{{users.fullName}}</button>
+        <button mat-menu-item>Update Profile</button>
+        <button mat-menu-item (click)="logOut()">Logout</button>
+        <button mat-menu-item>Close</button>
+      </mat-menu>
+    </div> -->
+
+
+
+
+
+      <!-- <img id="img" *ngIf = "isLoggedIn && users" [src] = "userProfile" alt="profileImage" class = "profile">
+    <button *ngIf="isLoggedIn" mat-raised-button color = "primary" class = "logoutBtn" (click)="logOut()"  >
+        LogOut
+     </button>  -->
+    
+    </mat-toolbar>
+

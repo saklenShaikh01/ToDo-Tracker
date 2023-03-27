@@ -1,0 +1,88 @@
+.common-div{
+    display: inline-flex;
+    /* height:100px;
+    width: 200px; */
+    margin-left: 50px;
+    margin-top: 30px;
+    background-color: red;
+    text-align: center;
+    border-radius: 35px;
+    box-shadow: 3px 3px 3px 0px gray;
+}
+.menu-class mat-icon{
+    position: relative;
+    left: 135px;
+    
+}
+.empty{
+    margin-top: 250px;
+    color: #fff;
+    margin-bottom: 250px;
+    text-align: center;
+    /* margin: auto; */
+}
+.div{
+    margin-bottom: 50px;
+}
+.bottom{
+    position: relative;
+    right: 88px;
+}
+.menu-class button{
+    position: relative;
+    left: 140px;
+    
+}
+.highPrDiv a{
+   text-decoration: none;
+   color: black;
+   padding: 20px;
+    
+}
+
+.mediumPrDiv a{
+    text-decoration: none;
+   color: black;
+   padding: 20px;
+}
+.lowPrDiv a{
+    text-decoration: none;
+   color: black;
+   padding: 20px;
+}
+.highPrDiv{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px gray;
+    background:#f58c8e;
+    height: 200px;
+    width: 180px;
+}
+.mediumPrDiv{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px gray;
+    background: #e9fc7d;
+    height: 200px;
+    width: 180px;
+}
+.lowPrDiv{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px gray;
+    background: #00ee6e;
+    height: 200px;
+    width: 180px;
+}
+.cont{
+    margin-top: -40px;
+}
+.no-priority a{
+    text-decoration: none;
+   color: black;
+   padding: 20px;
+}
+.no-priority{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px gray;
+    background: #00ee6e;
+    height: 200px;
+    width: 200px;
+}

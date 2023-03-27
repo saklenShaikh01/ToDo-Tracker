@@ -1,0 +1,110 @@
+.common-div{
+    
+    display: inline-flex;
+    /* height:100px;
+    width: 200px; */
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color:transparent;
+    text-align: center;
+    border-radius: 35px;
+    box-shadow: 3px 3px 3px 0px gray;
+    z-index: -1;
+    
+}
+.badge{
+    color: black;
+    position: relative;
+    right: 48px;
+    top: 14px;
+    font-size: 13px;
+}
+.bottom{
+    position: relative;
+    right: 88px;
+    top: 20px;
+}
+.empty{
+    margin-top: 200px;
+    color: #fff;
+    margin-bottom: 200px;
+    text-align: center;
+    /* margin: auto; */
+}
+.priority{
+    /* margin-left: 20px; */
+    margin-bottom: 80px;
+}
+.select{
+    margin-left: 50px;
+}
+.opt{
+    padding: 30px;
+    /* margin-left: 50px; */
+    
+}
+.mat-chip-div{
+    margin: auto;
+    margin-top: 50px;
+    /* padding-left: 50px; */
+   
+}
+.menu-class mat-icon{
+    position: relative;
+    left: 135px;
+    
+}
+.menu-class button{
+    position: relative;
+    left: 140px;
+    
+}
+.highPrDiv a{
+   text-decoration: none;
+   color: black;
+   padding: 20px;
+    
+}
+
+.mediumPrDiv a{
+    text-decoration: none;
+   color: black;
+   padding: 20px;
+}
+.lowPrDiv a{
+    text-decoration: none;
+   color: black;
+   padding: 20px;
+}
+.no-priority a{
+    text-decoration: none;
+   color: black;
+   padding: 20px;
+}
+.highPrDiv{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px gray;
+    background:#f58c8e;
+    height: 200px;
+    width: 180px;
+}
+.mediumPrDiv{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px gray;
+    background: #e9fc7d;
+    height: 200px;
+    width: 180px;
+}
+.lowPrDiv{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px gray;
+    background: #00ee6e;
+    height: 200px;
+    width: 180px;
+}
+.no-priority{
+    box-shadow: 3px 3px 3px 0px gray;
+    height: 200px;
+    width: 180px;
+}

@@ -1,0 +1,101 @@
+
+#div
+{
+   
+    position: relative;
+    max-width: 600px;
+    margin-left: 300px;
+    margin-top: 60px; 
+    /* border-radius: 50%; */
+}
+/* input{
+    border: 15px solid black;
+    border-radius: 50px;
+} */
+
+.form-width{
+    /* border: 1px solid transparent;
+    border-radius: 500px; */
+    width: 62%;
+    height: 75px;
+   
+}
+
+.login__input {
+	color: black;
+	font-size: 1.15rem;
+	width: 500px;
+	padding: .5rem 1rem;
+	border: 0.01px solid gray;
+	outline: none;
+	border-radius: 1.5rem;
+	background-color: rgb(255, 255, 255);
+	letter-spacing: 1px;
+}
+
+.login__input:hover,
+.login__input:focus{
+	color: black;
+	border: 2px solid rgb(175, 175, 175);
+	background-color: #c5c3c3;
+}
+.login-nav {
+	position: relative;
+    left: 1130px;
+    top: -85px;
+	padding: 0;
+	margin: 0 0 6em 1rem;
+}
+
+.login-nav__item {
+	list-style: none;
+	display: inline-block;
+}
+
+.login-nav__item + .login-nav__item {
+	margin-left: 2.25rem;
+}
+
+.login-nav__item a {
+	position: relative;
+	color: gray;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 1.25rem;
+	padding-bottom: .5rem;
+	transition: .20s all ease;
+}
+
+.login-nav__item.active a,
+.login-nav__item a:hover{
+	color: rgb(46, 35, 35);
+	transition: .15s all ease;
+}
+
+.login-nav__item a:after {
+	content: '';
+  display: inline-block;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  right: 100%;
+  bottom: -1px;
+  left: 0;
+  border-radius: 50%;
+  transition: .15s all ease;
+}
+
+.login-nav__item a:hover:after,
+.login-nav__item.active a:after{
+	background-color: gray;
+	height: 2px;
+	right: 0;
+	bottom: 2px;
+	border-radius: 0;
+	transition: .20s all ease;
+}
+#icon{ 
+    margin-bottom: 77px ;
+    margin-left: 450px;
+}

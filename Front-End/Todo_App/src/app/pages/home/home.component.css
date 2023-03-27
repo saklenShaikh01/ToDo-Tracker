@@ -1,0 +1,145 @@
+.p-style{
+    margin-top: 150px;
+}
+.heading{
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    font-style: italic;
+    margin-left: 220px;
+}
+/* .background{
+    border-radius: 20px;
+} */
+.h2{
+    color:white;
+    /* font-weight: bold; */
+    margin-left: 240px;
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+#sec{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+#myvid{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+
+
+}
+.container{
+    border-radius: 20px;
+}
+#sign{
+    margin: auto;
+    margin-top: -10px;
+}
+.foot{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    color: black;
+    padding-top: 0px;
+    position: sticky;
+    
+    margin-top: -100px;
+    
+    /* top: 485px; */
+    /* margin-top: 20px; */
+}
+#f1>li{
+    list-style: none;
+    border: 1px transparent;
+    margin-top: 0px;
+    width: 358px;
+}
+
+#f1{
+    grid-area: about;
+}
+#f2>ul>li{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+.tab{
+    text-decoration: none;
+    color: black;
+}
+.p1{
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+    background-color: #4682b4;
+    border: 1px solid transparent;
+    width: 140.6%;
+    justify-content: space-evenly;
+padding-top: 10px;
+
+/* position: fixed;
+top: 500px; */
+}
+
+#f3>ul>li{
+    list-style: none;
+}
+
+#f4>ul>li{
+    list-style: none;
+}
+.tab1{
+    text-decoration: none;
+}
+.tab2{
+    text-decoration: none;
+    color: black;
+}
+#f5>ul>li{
+    
+    list-style: none;
+    display: inline;
+    /* background-color: black; */
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+    padding-left: 7px;
+}
+#s1{
+    background-color: white;
+    /* border: 1px transparent; */
+    border-radius: 50%;
+    padding: 8px;
+    color: black;
+    
+}
+#s2{
+    background-color: white;
+    /* border: 1px transparent; */
+    border-radius: 50%;
+    padding: 8px;
+    color: black;
+}
+#s3{
+     background-color: white;
+    /* border: 1px transparent; */
+    border-radius: 50%;
+    padding: 8px;
+    color: black;
+}
+#s4{
+     background-color: white;
+    /* border: 1px transparent; */
+    border-radius: 50%;
+    padding: 8px;
+    color: black;
+}

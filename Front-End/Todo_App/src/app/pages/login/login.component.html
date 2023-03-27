@@ -1,0 +1,52 @@
+<ul class="login-nav">
+  <li class="login-nav__item active">
+    <a (click)="openLoginform()">Log In</a>
+  </li>
+  
+  <li class="login-nav__item" >
+    <a (click)="openSignupform()">Sign-Up</a>
+  </li>
+</ul>
+    <!-- <h1 class = "h1">LogIn</h1> -->
+    
+    <div class = "myCard" *ngIf="!opensignup">
+      <form [formGroup] = "loginForm" >
+         
+         <mat-form-field class = "formField">
+            <input type="text" formControlName = "email"    matInput placeholder="xyz01@gmail.com" matSuffix style="margin-right: 300px; border-radius: 30px;"><mat-icon>mail</mat-icon>
+             <mat-error *ngIf = "email?.errors?.['required']" class="error">
+                Email is Required
+               </mat-error> 
+               <mat-error *ngIf = "email?.errors?.['invalidEmail']" class="error">
+                  Please Provide Your Valid Proper Email 
+                 </mat-error> 
+           </mat-form-field>
+            <mat-form-field class = "formField">
+             <input type="password" matInput formControlName = "password"  placeholder="Xyz@123" matSuffix style="margin-right: 300px; border-radius: 30px;"><mat-icon>lock</mat-icon>
+             <mat-error *ngIf = "password?.errors?.['required']" class="error">
+                Password is Required
+               </mat-error> 
+               <mat-error *ngIf = "password?.errors?.['pattern']" class="error">
+                Please Provide Valid Password
+                </mat-error> 
+           </mat-form-field>
+            <div class = "text-center">
+               <!-- <div class="input-field">
+                  <input type="submit" class="submit" [disabled]="!loginForm.valid" value="Login" id="">
+              </div> -->
+             <button  class="login__submit" (click) = "onSubmit()" type="submit" [disabled]="!loginForm.valid">Login</button>
+             <!-- <button mat-raised-button color = "accent" class = "resetBtn" type="reset" mat-dialog-close>Close</button> -->
+            </div>
+      </form>
+      <div class="h3-div">
+      <h3><a mat-dialog-close (click)="openMatDialog()">Forgot Password?</a></h3>
+     </div>
+    </div>
+     <!-- <div>
+      <asl-google-signin-button></asl-google-signin-button>
+     </div> -->
+     
+    
+    <div *ngIf="opensignup" class="signup">
+      <app-signin></app-signin>
+      </div>

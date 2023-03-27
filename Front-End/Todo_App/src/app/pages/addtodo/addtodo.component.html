@@ -1,0 +1,83 @@
+<mat-card class="myCard">
+    <mat-card-header>
+        <h1> <mat-icon style="color: white;">add_task</mat-icon> Add Your Task</h1>
+    </mat-card-header>
+    
+    <form [formGroup]="todoform" (ngSubmit)="addTodo()">
+    
+    <mat-form-field>
+        <input matInput type="text" placeholder="Todo Title" formControlName="todoTitle">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Todo Description" formControlName="todoDesc">
+    </mat-form-field>
+    
+    <div *ngIf = "showCatForm">
+        <!-- <form [formGroup]="categoryForm" (ngSubmit)="addCategory()"> -->
+            <mat-form-field>
+                 
+                <input matInput type="text" placeholder="Category Name" formControlName="categoryName">
+            </mat-form-field>
+        <!-- </form> -->
+        
+          
+        </div>
+    
+    
+       <div *ngIf = "openPriorityInput">
+        <mat-form-field appearance="fill" class = "form-input-field form-field">
+          <mat-label>Priority</mat-label>
+          <mat-select name="priority" formControlName = "priority">
+            <mat-option *ngFor = "let priorities of prioritiy" value="{{priorities}}">
+              {{priorities}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+       </div>
+    
+    <div  *ngIf = "showReminderDate">
+        <div>
+            <mat-icon (click) = "openDueDateOption()">event</mat-icon>  
+            <div *ngIf = "showDateOption">
+    <!-- <mat-form-field>
+        <mat-icon>event</mat-icon>
+        <input type="datetime-local" matInput formControlName = "startDate" id="demo" format="dd-MM-yyyy hh:mm a">
+    </mat-form-field> -->
+    
+    <mat-form-field>
+        
+        <mat-icon>event</mat-icon>
+        <input type="datetime-local" matInput formControlName = "endDate" id="demo" format="dd-MM-yyyy hh:mm a">
+        <!-- <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker> -->
+    </mat-form-field>
+    </div>
+    </div>
+    </div>
+
+    
+    
+    
+    <div class = "mat-chip-div">
+        <mat-chip-listbox aria-label="Fish selection">
+          <mat-chip-option (click) = "openCatForm()">Categories Your Task</mat-chip-option>
+          <mat-chip-option (click) = "setPriortyOption()">Priority</mat-chip-option>
+          <mat-chip-option (click) = "openReminderDateOption()">Set Due Date</mat-chip-option>
+        </mat-chip-listbox>
+       </div>
+    
+    
+    
+    <div class = "text-center">
+        <button  class="login__submit" type="submit"> <mat-icon>add</mat-icon> </button>
+        <!-- <button mat-raised-button color = "accent" class = "resetBtn" type="reset" mat-dialog-close>Close</button> -->
+       </div>
+    </form>
+    
+    
+    
+    
+    </mat-card>
+    <div class="bottom">
+        <app-footer></app-footer>
+        </div>

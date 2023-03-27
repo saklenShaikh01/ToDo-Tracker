@@ -1,0 +1,22 @@
+.div{
+    margin-top: 110px;
+   border-radius: 15px;
+  margin-right: 40px;
+   /* box-shadow: 5px 5px 5px 0px gray; */
+   border: none;
+   background: transparent;
+   margin-bottom: 100px;
+   color: white;
+}
+h2{
+    font-size: large;
+    /* font-weight: bold; */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.content{
+    margin: auto;
+}
+.bottom{
+    position: relative;
+    right: 88px;
+}

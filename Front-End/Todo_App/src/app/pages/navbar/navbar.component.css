@@ -1,0 +1,64 @@
+.example-spacer{
+    flex: 1 1 0;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: -5px;
+    background-color: transparent;
+}
+   
+.headbtn{
+    width: 160px;
+    height: 40px; 
+    margin-right: 10px;
+    margin-top: -5px;
+    font-size: 1em;
+    border-radius: 50px;
+}
+ 
+mat-toolbar{
+  
+    position: fixed;
+    background-color: #4682b4;
+    border: 1px lightslategray;
+    width: 100%;
+    z-index: 1;
+    top: -1px;
+    height: 43px;
+    
+   
+}
+
+#img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* button{ */
+    /* background: transparent;
+    background-color: brown; */
+    /* font-size: 50px; */
+    /* height: 70px;
+    width: 70px; */
+/* } */
+button mat-icon{
+    /* color: white; */
+    font-size: 20px;
+}
+#user{
+    text-decoration: none;
+    color: black;
+}
+
+/* mat-icon{
+   color: white;
+} */
+
+/* div{
+    height: 70px;
+   background-color: brown;
+} */

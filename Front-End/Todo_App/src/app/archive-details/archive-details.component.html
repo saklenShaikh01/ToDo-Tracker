@@ -1,0 +1,18 @@
+<mat-card class="div" *ngFor="let todo of todos">
+    <mat-card-header>
+  <h2>{{todo.todoTitle}}</h2>
+  </mat-card-header>
+  <mat-card-content class="content">
+  Task Description :
+  {{todo.todoDesc}} <br> <br>
+  <!-- Start Date : {{todo.startDate | date:'medium'}} <br>  -->
+  End Date : {{todo.endDate | date:'medium'}} <br> <br>
+  categoryName :
+  {{todo.categoryName}} <br> <br>
+   Task Priority : 
+   {{todo.priority}}
+  </mat-card-content>
+  </mat-card>
+  <div class="bottom">
+    <app-footer></app-footer>
+    </div>

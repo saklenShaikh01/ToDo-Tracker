@@ -1,0 +1,41 @@
+<mat-card mat-ripple [matRippleCentered]="true"  class="card-content" *ngFor="let todo of todos">
+    <mat-card-header>
+        <!-- <h4> {{todo.todoTitle}}</h4> -->
+            </mat-card-header>
+            <mat-card-content>
+                <!-- <p> {{todo.todoDesc}}</p> -->
+                <form id="edit-form">
+                    <mat-form-field>
+        <mat-label> Todo Title </mat-label>
+        <input type="text" matInput [(ngModel)]="todo.todoTitle" name="todoTitle" [ngModelOptions]="{standalone: true}">
+                    </mat-form-field>
+        <br>
+                    <mat-form-field>
+                        <mat-label> Todo Description </mat-label>
+                        <input type="text" matInput [(ngModel)]="todo.todoDesc" name="todoDesc" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                    <br>
+                                    <mat-form-field>
+                                        <mat-label> {{todo.endDate | date:'medium'}} </mat-label>
+                                        <input type="datetime-local" matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="todo.endDate" format="dd-MM-yyyy hh:mm a"><mat-icon>event</mat-icon>
+                                    </mat-form-field>
+                                    <br>
+                                    <mat-form-field appearance="fill" class = "form-input-field form-field">
+                                        <mat-label>Priority</mat-label>
+                                        <mat-select name="priority" [(ngModel)]="todo.priority" [ngModelOptions]="{standalone: true}">
+                                          <mat-option *ngFor = "let priorities of prioritiy" value="{{priorities}}">
+                                            {{priorities}}
+                                          </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button color="accent" class="but" (click)="editTodo()" mat-icon-button type="submit">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                </mat-card-actions>
+</mat-card>
+<div class="bottom">
+    <app-footer></app-footer>
+    </div>

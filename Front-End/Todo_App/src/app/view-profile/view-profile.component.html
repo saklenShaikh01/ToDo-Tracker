@@ -1,0 +1,19 @@
+<mat-card class="card" >
+    <img id="img"  [src] = "userProfile" alt="profileImage" class = "profile"> <br>
+    <mat-card-header class="head"> <h3> <mat-icon style="color: white;">profile</mat-icon> {{userD.fullName}}</h3></mat-card-header> 
+    
+   
+    
+    
+    <mat-card-content class="content">
+        <br>
+        <mat-icon style="color: white;">profile</mat-icon>
+       <p>{{userD.contact}}</p>
+        <p>{{userD.email}}</p>
+    </mat-card-content>
+    <!-- <button routerLink="/userDashboard/profileupdate"><mat-icon>edit</mat-icon></button> -->
+</mat-card>
+
+<div class="bottom">
+    <app-footer></app-footer>
+    </div>

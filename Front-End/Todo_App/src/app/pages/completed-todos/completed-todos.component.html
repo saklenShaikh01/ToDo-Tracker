@@ -1,0 +1,148 @@
+<div class="empty" *ngIf="archiveTodo.length===0">
+  <strong>
+<p>You don't have any completed task</p></strong>
+ </div>
+
+<div class="div">
+<div class = "common-div" *ngFor = "let task of archiveTodo" [ngSwitch] = "task.priority">
+
+
+    <mat-card *ngSwitchCase = "'High'" class = "highPrDiv">
+      <button  class = "menu-class" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <div>
+        
+        <!-- <button class = "menu-class" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+          </button> -->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink = "/userDashboard/completeDetails/{{task.todoId}}">
+          <mat-icon>info</mat-icon>
+          <span>See Details</span>
+        </button>
+        <!-- <button mat-menu-item routerLink = "/userDashboard/updatetodo/{{task.todoId}}">
+          <mat-icon>update</mat-icon>
+          <span>Update</span>
+        </button> -->
+        <!-- <button mat-menu-item (click) = "addTodosIntoArchive(task)">
+          <mat-icon>done_all</mat-icon>
+          <span>Mark As Done</span>
+        </button>
+        <button mat-menu-item (click) = "deleteTodos(task.todoId)">
+          <mat-icon>delete</mat-icon>
+          <span>Delete</span>
+        </button> -->
+      </mat-menu>
+       </div>
+       <a class="a" routerLink = "/userDashboard/completeDetails/{{task.todoId}}" class="cont">           
+        <h4 class = "todo-title-h5">{{task.todoTitle | titlecase}}</h4>
+           <h5 class = "showing-duedate-h5">{{task.endDate | date:'medium'}}</h5>
+                  <h4><mat-icon style="color: red;">priority_high</mat-icon></h4>
+         <!-- <p class = "todo-para">{{task.todoDesc.substring(0, 30) | titlecase}}..</p> -->
+    
+        </a> 
+    </mat-card>
+    
+    <mat-card *ngSwitchCase = "'Medium'" class = "mediumPrDiv">
+      <button class = "menu-class" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <div>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink = "/userDashboard/completeDetails/{{task.todoId}}">
+          <mat-icon>info</mat-icon>
+          <span>See Details</span>
+        </button>
+        <!-- <button mat-menu-item routerLink = "/userDashboard/updatetodo/{{task.todoId}}">
+          <mat-icon>update</mat-icon>
+          <span>Update</span>
+        </button> -->
+        <!-- <button mat-menu-item (click) = "addTodosIntoArchive(task)">
+          <mat-icon>done_all</mat-icon>
+          <span>Mark As Completed</span>
+        </button>
+        <button mat-menu-item (click) = "deleteTodos(task.todoId)">
+          <mat-icon>delete</mat-icon>
+          <span>Delete</span>
+        </button> -->
+      </mat-menu>
+       </div>
+       <a class="a" routerLink = "/userDashboard/completeDetails/{{task.todoId}}" class="cont">           
+        <h4 class = "todo-title-h5">{{task.todoTitle | titlecase}}</h4>
+           <h5 class = "showing-duedate-h5">{{task.endDate | date:'medium'}}</h5>
+           <h4><mat-icon  style="color: rgb(255, 166, 0);">remove_circle_outline</mat-icon></h4>
+         <!-- <p class = "todo-para">{{task.todoDesc.substring(0, 30) | titlecase}}..</p>  -->
+         <!-- <p>{{task.categoryName}}</p> -->
+        </a> 
+    </mat-card>
+    
+    <mat-card *ngSwitchCase = "'Low'" class = "lowPrDiv">
+      <button class = "menu-class" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <div>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink = "/userDashboard/completeDetails/{{task.todoId}}">
+          <mat-icon>info</mat-icon>
+          <span>See Details</span>
+        </button>
+        <!-- <button mat-menu-item routerLink = "/userDashboard/updatetodo/{{task.todoId}}">
+          <mat-icon>update</mat-icon>
+          <span>Update</span>
+        </button> -->
+        <!-- <button mat-menu-item (click) = "addTodosIntoArchive(task)">
+          <mat-icon>done_all</mat-icon>
+          <span>Mark As Done</span>
+        </button>
+        <button mat-menu-item (click) = "deleteTodos(task.todoId)">
+          <mat-icon>delete</mat-icon>
+          <span>Delete</span> -->
+        <!-- </button> -->
+      </mat-menu>
+       </div>
+       <a class="a" routerLink = "/userDashboard/completeDetails/{{task.todoId}}" class="cont">           
+        <h4 class = "todo-title-h5">{{task.todoTitle | titlecase}}</h4>
+           <h5 class = "showing-duedate-h5">{{task.endDate | date:'medium'}}</h5>
+           <h4> <mat-icon style="color: green;">arrow_circle_down</mat-icon></h4>
+         <!-- <p class = "todo-para">{{task.todoDesc.substring(0, 30) | titlecase}}..</p>  -->
+        </a> 
+    </mat-card>
+    
+    <mat-card *ngSwitchDefault class = "no-priority">
+      <button class = "menu-class" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <div>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink = "/userDashboard/completeDetails/{{task.todoId}}">
+          <mat-icon>info</mat-icon>
+          <span>See Details</span>
+        </button>
+        <!-- <button mat-menu-item routerLink = "/userDashboard/updatetodo/{{task.todoId}}">
+          <mat-icon>update</mat-icon>
+          <span>Update</span>
+        </button> -->
+        <!-- <button mat-menu-item (click) = "addTodosIntoArchive(task)">
+          <mat-icon>done_all</mat-icon>
+          <span>Mark As Done</span>
+        </button> -->
+        <!-- <button mat-menu-item (click) = "deleteTodos(task.todoId)">
+          <mat-icon>delete</mat-icon>
+          <span>Delete</span>
+        </button> -->
+      </mat-menu>
+       </div>
+       <a class="a" routerLink = "/userDashboard/completeDetails/{{task.todoId}}" class="cont">           
+        <h4 class = "todo-title-h5">{{task.todoTitle | titlecase}}</h4>
+           <h5 class = "showing-duedate-h5">{{task.endDate | date:'medium'}}</h5>
+         <!-- <p class = "todo-para">{{task.todoDesc.substring(0, 30) | titlecase}}..</p>  -->
+        </a> 
+    </mat-card>
+    
+    </div>
+  </div>
+    <div class="bottom">
+      <app-footer></app-footer>
+      </div>
+    

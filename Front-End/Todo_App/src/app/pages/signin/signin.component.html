@@ -1,0 +1,67 @@
+<!-- <div class="container mt-5"> -->
+    <!-- <mat-card class = "myCard"> -->
+      <div class = "myCard">
+    <form [formGroup]="signupForm" (ngSubmit)="signup()" (ngSubmit)="openDialog('0ms', '0ms')">
+      <div class="mb-3 text-center" id="pic">
+        <img width="90" height="90" id="pict" class="margin-top mat-elevation-z1"
+            [src]="url" alt = "profile" />
+      </div>
+    <mat-icon (click)="inputField.click()" id="icon">add_a_photo</mat-icon>
+    <input #inputField hidden type="file" (change)="onFileSelect($event)" id="files" formControlName="profile" />
+    
+    <mat-form-field class = "formField">
+     <input type="text" matInput placeholder="Full Name" formControlName="fullName">
+     <mat-error *ngIf="fullName?.errors?.['required']" class="error">
+      Full Name  is required.
+   </mat-error>
+    </mat-form-field>
+    
+      <mat-form-field class = "formField">
+     <input type="text" matInput placeholder="Email" formControlName="email">
+     <mat-error *ngIf="email?.errors?.['required']" class="error">
+      Email is required.
+   </mat-error>
+   <mat-error *ngIf = "email?.errors?.['pattern']" class="error">
+    Please Provide Your Valid Proper Email 
+   </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class = "formField">
+      <input type="text" matInput placeholder="Contact" formControlName="contact">
+      <mat-error *ngIf="contact?.errors?.['required']" class="error">
+      Contact  is required.
+    </mat-error>   <mat-error *ngIf="contact?.errors?.['pattern']" class="error">
+      Please Enter Valid Contact
+    </mat-error>
+     </mat-form-field>
+     
+    <mat-form-field class = "formField">
+     <input type="password" matInput placeholder="Your Password" formControlName="password">
+     <mat-error *ngIf="password?.errors?.['required']" class="error">
+      Password is required.
+   </mat-error>
+   <mat-error *ngIf="password?.errors?.['pattern']" class="error">
+    Password should contains atleast 1 upercase,1 special charactor,1 number and atleast 8 charactors
+ </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class = "formField">
+     <input type="password" matInput placeholder="Re-enter Password" formControlName="confirmPassword">
+     <mat-error *ngIf="confirmPassword?.errors?.['required']" class="error">
+    Confirm  Password is required.
+   </mat-error>
+    </mat-form-field>
+    <div>
+      <mat-error *ngIf="signupForm?.errors?.['missMatch']" class="error">
+       confirm password should match to  password
+    </mat-error>
+   </div>
+    <div class = "text-center">
+     <button  [disabled]="!signupForm.valid" class="login__submit" >Register</button>
+     <!-- <button mat-raised-button color = "accent" class = "resetBtn">Reset</button> -->
+    </div>
+</form>
+</div>
+<!-- </mat-card> -->
+<!-- </div> -->
+

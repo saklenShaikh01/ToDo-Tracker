@@ -1,0 +1,53 @@
+
+
+
+  
+
+<nav id="nav" class="nav flex-column">
+
+
+   <div id="panel">
+        <!-- <mat-expansion-panel hideToggle> -->
+          <!-- <mat-expansion-panel-header>
+            <mat-panel-title>
+                <mat-icon class="menu" style="color: brown;">menu</mat-icon>
+                <a mat-button class="nav-link" aria-current="page" class="m" style="color: brown;" >Menu</a>
+            </mat-panel-title>
+          
+          </mat-expansion-panel-header> -->
+         <div class="userp">
+            <a ><img id="img"  [src] = "userProfile" alt="profileImage" class = "profile"></a> <br>
+            <div class="name">{{users.fullName}}</div><br>
+            <button mat-button class="view" [routerLinkActive]="'active'" style="color: white;" routerLink="/userDashboard/profile">View Profile</button>
+          </div>
+            
+            <!-- <mat-menu #menu="matMenu">
+              <button mat-menu-item>{{users.fullName}}</button>
+              <button mat-menu-item>Update Profile</button>
+              <button mat-menu-item (click)="logOut()">LogOut</button>
+            </mat-menu> -->
+          
+          <!-- class="nav-link" -->
+          <!-- aria-current="page" -->
+          <mat-icon class="menu" style="color: white;" id="inbox" matBadge={{todoDetails.length}} matBadgeColor="warn">inbox</mat-icon>
+          <a mat-button [routerLinkActive]="'active'" routerLink="/userDashboard/viewTodo" style="color: white;" id="msg" class="icon">Inbox</a>
+<!-- <router-outlet></router-outlet> -->
+          <mat-icon class="menu" id="add" style="color: white;">add_task</mat-icon>
+          <a mat-button class="nav-link" [routerLinkActive]="'active'" routerLink="/userDashboard/addtodo" style="color: white;" aria-current="page" class="icon">Add Todo</a>
+       <!-- <mat-icon class="menu" style="color: brown;">category</mat-icon>
+          <a mat-button class="nav-link" aria-current="page" style="color: brown;" class="icon">Add Category</a> -->
+      
+         <mat-icon class="menu" style="color: white;  margin-top: 0px;">priority_high</mat-icon>
+          <a mat-button class="nav-link" [routerLinkActive]="'active'" routerLink="/userDashboard/priorities" aria-current="page" class="icon" style="color: white;">Priorties</a>
+      
+      
+          <mat-icon class="menu" style="color: white; margin-top: 0px;">archive</mat-icon>
+          <a mat-button class="nav-link" [routerLinkActive]="'active'" routerLink="/userDashboard/archieve" aria-current="page" class="icon" style="color: white;">Archived</a>
+
+          <mat-icon class="menu" style="color: white; margin-top: 0px;">done_all</mat-icon>
+          <a mat-button class="nav-link" [routerLinkActive]="'active'" routerLink="/userDashboard/completed" style="color: white;" aria-current="page" class="icon">Complete</a>
+        <!-- </mat-expansion-panel> -->
+    </div>
+
+    
+</nav>
